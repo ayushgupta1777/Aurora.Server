@@ -616,6 +616,19 @@ function registerRoutes() {
       };
     },
   );
+
+
+
+
+
+  // seed data
+
+  fastify.get('/admin/seed', async (request, reply) => {
+  const { seedDatabase } = await import('./seed.js');
+  await seedDatabase();
+  return { message: 'Database seeded successfully!' };
+});
+
 }
 
 /* ---------------------------------
