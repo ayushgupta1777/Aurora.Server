@@ -1,7 +1,7 @@
 require('dotenv').config();
 const fastify = require("fastify")({ logger: true });
 
-const seedDatabase = required("./seed.js")
+// const seedDatabase = required("./seed.js")
 
 const swagger = require("@fastify/swagger");
 const swaggerUI = require("@fastify/swagger-ui");
